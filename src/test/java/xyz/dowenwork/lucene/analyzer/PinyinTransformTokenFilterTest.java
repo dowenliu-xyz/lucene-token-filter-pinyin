@@ -26,7 +26,7 @@ public class PinyinTransformTokenFilterTest extends BaseTokenStreamTestCase {
     @Before
     public void before() throws IOException {
         this.tokenizer = new MockTokenizer();
-        this.tokenizer.setReader(new StringReader("和平 重量 and 中国 中華人民共和國 凪のあすから"));
+        this.tokenizer.setReader(new StringReader("和平 重量 and 中国 中華人民共和國 凪のあすから 降省给"));
     }
 
     private int _innerTest() throws IOException {
@@ -49,7 +49,7 @@ public class PinyinTransformTokenFilterTest extends BaseTokenStreamTestCase {
         this.filter = new PinyinTransformTokenFilter(tokenizer);
         this.filter.reset();
         int position = _innerTest();
-        assertTrue(position == 6);
+        assertTrue(position == 7);
     }
 
     @Test
@@ -57,7 +57,8 @@ public class PinyinTransformTokenFilterTest extends BaseTokenStreamTestCase {
         this.filter = new PinyinTransformTokenFilter(tokenizer, PinyinTransformTokenFilter.TYPE_PINYIN, 1, false);
         this.filter.reset();
         int position = _innerTest();
-        assertTrue(position == 4);
+        System.err.println(position);
+        assertTrue(position == 5);
     }
 
     @Test
@@ -65,6 +66,14 @@ public class PinyinTransformTokenFilterTest extends BaseTokenStreamTestCase {
         this.filter = new PinyinTransformTokenFilter(tokenizer, PinyinTransformTokenFilter.TYPE_ABBREVIATION);
         this.filter.reset();
         int position = _innerTest();
-        assertTrue(position == 6);
+        assertTrue(position == 7);
+    }
+
+    @Test
+    public void testPolyphone() throws IOException{
+        this.filter = new PinyinTransformTokenFilter(tokenizer, PinyinTransformTokenFilter.TYPE_ABBREVIATION,2,1,true);
+        this.filter.reset();
+        int position = _innerTest();
+        assertTrue(position == 7);
     }
 }
