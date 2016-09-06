@@ -239,7 +239,7 @@ public class PinyinTransformTokenFilter extends TokenFilter {
      *
      * @param chinese 含中文的字符串，若不含中文，原样输出
      * @return 转换后的文本
-     * @throws BadHanyuPinyinOutputFormatCombination
+     * @throws BadHanyuPinyinOutputFormatCombination 不良的拼音输出格式
      */
     private Collection<String> getPinyinAbbreviation(String chinese)
             throws BadHanyuPinyinOutputFormatCombination {
@@ -292,7 +292,7 @@ public class PinyinTransformTokenFilter extends TokenFilter {
      *
      * @param chinese 含中文的字符串，若不含中文，原样输出
      * @return 转换后的文本
-     * @throws BadHanyuPinyinOutputFormatCombination
+     * @throws BadHanyuPinyinOutputFormatCombination 不良的拼音输出格式
      */
     private Collection<String> getPinyin(String chinese)
             throws BadHanyuPinyinOutputFormatCombination {
