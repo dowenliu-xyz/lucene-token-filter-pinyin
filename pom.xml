@@ -17,6 +17,12 @@
             <email>hawkdowen@hotmail.com</email>
             <timezone>+8</timezone>
         </developer>
+        <developer>
+            <id>rockagen</id>
+            <name>RA</name>
+            <url>https://github.com/rockagen</url>
+            <email>rockagen@gmail.com</email>
+        </developer>
     </developers>
 
     <properties>
