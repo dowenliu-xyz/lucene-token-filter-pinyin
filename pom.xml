@@ -6,7 +6,7 @@
 
     <groupId>xyz.dowenwork.npl</groupId>
     <artifactId>lucene-token-filter-pinyin</artifactId>
-    <version>5.5.2.0</version>
+    <version>6.2.0.0</version>
     <packaging>jar</packaging>
     <description>拼音转换TokenFilter</description>
 
@@ -28,7 +28,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.junit.version>4.12</dependency.junit.version>
-        <dependency.lucene.version>5.5.2</dependency.lucene.version>
+        <dependency.lucene.version>6.2.0</dependency.lucene.version>
         <dependency.pinyin4j.version>2.5.0</dependency.pinyin4j.version>
     </properties>
 
@@ -65,8 +65,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
