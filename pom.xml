@@ -6,7 +6,7 @@
 
     <groupId>xyz.dowenwork.npl</groupId>
     <artifactId>lucene-token-filter-pinyin</artifactId>
-    <version>6.2.0.0-SNAPSHOT</version>
+    <version>6.2.0.0</version>
     <packaging>jar</packaging>
     <description>拼音转换TokenFilter</description>
 
