@@ -6,7 +6,7 @@
 
     <groupId>xyz.dowenwork.npl</groupId>
     <artifactId>lucene-token-filter-pinyin</artifactId>
-    <version>6.2.0.0</version>
+    <version>7.1.0.0</version>
     <packaging>jar</packaging>
     <description>拼音转换TokenFilter</description>
 
@@ -28,7 +28,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.junit.version>4.12</dependency.junit.version>
-        <dependency.lucene.version>6.2.0</dependency.lucene.version>
+        <dependency.lucene.version>7.1.0</dependency.lucene.version>
         <dependency.pinyin4j.version>2.5.0</dependency.pinyin4j.version>
     </properties>
 
@@ -48,7 +48,7 @@
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-analyzers-common</artifactId>
             <version>${dependency.lucene.version}</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.lucene</groupId>
@@ -71,21 +71,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <layout>default</layout>
-            <name>Snapshots</name>
-            <uniqueVersion>false</uniqueVersion>
-            <url>http://nexus-server:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>releases</id>
-            <layout>default</layout>
-            <name>Release</name>
-            <uniqueVersion>true</uniqueVersion>
-            <url>http://nexus-server:8081/nexus/content/repositories/releases/</url>
-        </repository>
-    </distributionManagement>
 </project>
