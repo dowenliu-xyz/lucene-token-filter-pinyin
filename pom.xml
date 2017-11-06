@@ -71,21 +71,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <layout>default</layout>
-            <name>Snapshots</name>
-            <uniqueVersion>false</uniqueVersion>
-            <url>http://nexus-server:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>releases</id>
-            <layout>default</layout>
-            <name>Release</name>
-            <uniqueVersion>true</uniqueVersion>
-            <url>http://nexus-server:8081/nexus/content/repositories/releases/</url>
-        </repository>
-    </distributionManagement>
 </project>
